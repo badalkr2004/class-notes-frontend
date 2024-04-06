@@ -2,17 +2,18 @@ function uploadImage() {
     const fileInput = document.getElementById('fileInput');
     const subIn = document.getElementById("subInput");
     const preview = document.getElementById('preview');
+    const subBtn = document.getElementById("submit")
   
     const file = fileInput.files[0];
 
-   
+    subBtn.disabled = true;
 
     if (file && subIn.value &&  ((file.size/1024)/1024).toFixed(2) < 10) {
       const formData = new FormData();
       formData.append('file', file);
       formData.append('subject',subIn.value);
      
-  
+        
       fetch('https://class-notes-sharer.vercel.app/api/upload', {
         method: 'POST',
         body: formData
@@ -25,8 +26,12 @@ function uploadImage() {
         const img = document.createElement('img');
         img.src = imageUrl;
         preview.appendChild(img);
+        subBtn.disabled = false;
       })
-      .catch(error => console.error('Error:', error));
+      .catch(error => {
+        subBtn.disabled = false;
+        console.error('Error:', error)}
+        );
     } else {
       alert('Please select an image to upload.');
     }
