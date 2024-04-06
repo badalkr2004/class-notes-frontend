@@ -5,9 +5,9 @@ function uploadImage() {
   
     const file = fileInput.files[0];
 
-    
+   
 
-    if (file && subIn.value) {
+    if (file && subIn.value &&  ((file.size/1024)/1024).toFixed(2) < 10) {
       const formData = new FormData();
       formData.append('file', file);
       formData.append('subject',subIn.value);
