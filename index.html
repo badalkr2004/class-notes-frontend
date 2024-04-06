@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes of Department of Computer Applications</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Notes of Department of Computer Applications</h1>
+
+        <h3>PATNA COLLEGE , PATNA UNIVERSITY</h3>
+
+        <p>Note: These notes get updated each day after 3 pm, to get Notes of the current day always check after 3 pm.
+        </p>
+
+    </header>
+
+    <main>
+
+        <section class="subject">
+
+            <h2>Computer Architecture</h2>
+
+            <div class="notes">
+
+                <div class="slides-container" id="ca-notes">
+<!-- 
+                    <img src="https://th.bing.com/th/id/OIP.FoB9kizkjpfSnnMV6ftGIQHaKM?rs=1&pid=ImgDetMain"
+                        alt="Page 1">
+
+                    <img src="https://www.perlego.com/_next/image?url=https:%2F%2Fwww.perlego.com%2Fbooks%2FRM_Books%2Ftaylor_francis_lm_feonmi%2F9781498772723_500_750.jpg&w=425&q=10"
+                        alt="Page 2">
+
+                    <img src="https://img.perlego.com/books/RM_Books/taylor_francis_lm_feonmi/9781466585553_300_450.webp"
+                        alt="Page 3"> -->
+
+                    <!-- Add more images as needed -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Insert Google Drive link for Computer Architecture notes here -->
+
+        </div>
+
+        </section>
+
+        <section class="subject">
+
+            <h2> Java programming </h2>
+
+            <div class="notes">
+
+                <div class="slides-container">
+
+                    <img src="https://www.startertutorials.com/corejava/wp-content/uploads/2014/09/java-1.png"
+                        alt="Page 1">
+
+                    <img src="https://i.pinimg.com/originals/2a/0d/7e/2a0d7e55b6b424c57fb016106f6231ec.png"
+                        alt="Page 2">
+
+                    <img src="https://i.pinimg.com/originals/2a/0d/7e/2a0d7e55b6b424c57fb016106f6231ec.png"
+                        alt="Page 3">
+
+                    <img src="https://www.startertutorials.com/corejava/wp-content/uploads/2014/09/java-1.png"
+                        alt="Page 4">
+
+                 <!-- Add more images as needed -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Insert Google Drive link for Java Programming notes here -->
+
+        </div>
+
+        </section>
+
+        <section class="subject">
+
+            <h2> Mathematics </h2>
+
+            <div class="notes">
+
+                <div class="slides-container">
+
+                    <img src="https://ecdn.teacherspayteachers.com/thumbitem/Notebook-Covers-1956600-1500876008/original-1956600-1.jpg"
+                        alt="Page 1">
+
+                    <img src="https://ecdn.teacherspayteachers.com/thumbitem/Math-Interactive-Notebook-Covers-2696951-1505425898/original-2696951-2.jpg"
+                        alt="Page 2">
+
+                    <img src="https://i.pinimg.com/236x/95/86/38/9586380ca210c405f6806516067c1f1b--classroom-labels-regular-exercise.jpg"
+                        alt="Page 3">
+
+                    <!-- Add more images as needed -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Insert Google Drive link for Mathematics notes here -->
+
+        </div>
+
+        </section>
+
+        <section class="subject">
+
+            <h2>EVS</h2>
+
+            <div class="notes">
+
+                <div class="slides-container">
+
+                    <img src="https://th.bing.com/th/id/OIP.Mm1WNgu-AqF2CIFoCc-RfgHaLH?rs=1&pid=ImgDetMain"
+                        alt="Page 1">
+
+                    <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-422-earth-day-green-earth-background-image_203436.jpg"
+                        alt="Page 2">
+
+                    <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-605-green-nature-world-environment-day-poster-background-image_227580.jpg"
+                        alt="Page 3">
+
+                    <!-- Add more images as needed -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="notes">
+
+            <!-- Insert Google Drive link for EVS notes here -->
+
+        </div>
+
+        </section>
+
+    </main>
+
+    <script >
+        window.addEventListener("DOMContentLoaded",async(e)=>{
+    const caContainer = document.getElementById("ca-notes")
+    const res = await fetch("https://class-notes-sharer.vercel.app/api/search")
+    const notes = await res.json()
+
+    notes.result.map(img=>{
+        const img1= document.createElement('img');
+        img1.src = img.url ;
+        img1.alt = img.subjectName + " notes"
+        caContainer.appendChild(img1);
+      
+    })
+
+ 
+})
+    </script>
+
+</body>
+<hr>
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <p>© 2024 Shubham Kumar Mishra</p>
+
+            <p>Providing notes</p>
+
+        </div>
+
+    </div>
+
+    <div class="license">
+        <button class="license-button">View License</button>
+        <div class="license-text">
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                associated documentation files (the "Software"), to deal in the Software without restriction, including
+                without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+                following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial
+                portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+                LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+                NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+    </div>
+</footer>
